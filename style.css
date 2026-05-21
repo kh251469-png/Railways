@@ -1,0 +1,463 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+
+body{
+    font-family:Arial, sans-serif;
+    background:#fff5fa;
+    color:#333;
+    line-height:1.6;
+}
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+.skip-link{
+    position:absolute;
+    left:-999px;
+}
+
+.skip-link:focus{
+    left:10px;
+    top:10px;
+    background:#ff4da6;
+    color:white;
+    padding:10px;
+    z-index:1000;
+}
+
+.visually-hidden{
+    position:absolute;
+    left:-9999px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    background:#ff66b2;
+    padding:15px 40px;
+    color:white;
+}
+
+.header-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+}
+
+.logo a{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    color:white;
+}
+
+.logo-text{
+    font-size:24px;
+    font-weight:bold;
+    margin-left:10px;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#ffe6f2;
+}
+
+.btn-login{
+    background:white;
+    color:#ff3385;
+    padding:8px 16px;
+    border-radius:20px;
+}
+
+/* =========================
+   HOME SECTION
+========================= */
+
+.search-section{
+    padding:70px 20px;
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
+    url("background.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.search-section h1{
+    font-size:42px;
+    color:#ff3385;
+    margin-bottom:30px;
+}
+
+/* =========================
+   HOME FORM ONLY
+========================= */
+
+#trip-search-form{
+    background:white;
+    max-width:950px;
+    margin:auto;
+    padding:30px;
+    border-radius:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.form-row{
+    display:flex;
+    gap:20px;
+    margin-bottom:20px;
+    flex-wrap:wrap;
+}
+
+.form-group{
+    flex:1;
+    text-align:left;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:bold;
+    color:#ff3385;
+}
+
+input,
+select{
+    width:100%;
+    padding:12px;
+    border:2px solid #ffcce0;
+    border-radius:12px;
+    outline:none;
+    transition:0.3s;
+}
+
+input:focus,
+select:focus{
+    border-color:#ff3385;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.search-btn,
+.login-btn,
+.promo-card button{
+    background:#ff4da6;
+    color:white;
+    border:none;
+    padding:14px 25px;
+    border-radius:25px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.search-btn:hover,
+.login-btn:hover,
+.promo-card button:hover{
+    background:#e60073;
+}
+
+/* =========================
+   PROMO SECTION
+========================= */
+
+.promo-section{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.promo-section h2{
+    font-size:36px;
+    color:#ff3385;
+    margin-bottom:40px;
+}
+
+.promo-cards{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.promo-card{
+    background:white;
+    width:300px;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.promo-card:hover{
+    transform:translateY(-10px);
+}
+
+.promo-image{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.promo-card h3{
+    margin:20px 0 10px;
+    color:#ff3385;
+}
+
+.promo-card p{
+    padding:0 15px 20px;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.services-section{
+    background:#ffe6f2;
+    padding:60px 20px;
+    text-align:center;
+}
+
+.services-section h2{
+    font-size:36px;
+    color:#ff3385;
+    margin-bottom:40px;
+}
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+    gap:25px;
+}
+
+.service-item{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.service-item h3{
+    margin:15px 0;
+    color:#ff3385;
+}
+
+.service-icon{
+    width:70px;
+}
+
+/* =========================
+   LOGIN PAGE
+========================= */
+
+.login-section{
+    min-height:80vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:50px 20px;
+
+    background:
+    linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
+    url("background.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.login-container{
+    background:white;
+    width:100%;
+    max-width:450px;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+.login-container h1{
+    color:#ff3385;
+    margin-bottom:10px;
+}
+
+.login-subtitle{
+    color:#666;
+    margin-bottom:30px;
+}
+
+#login-form{
+    width:100%;
+}
+
+.help-text{
+    display:block;
+    margin-top:5px;
+    font-size:13px;
+    color:#777;
+}
+
+.remember-me{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin:15px 0 25px;
+}
+
+.remember-me input{
+    width:auto;
+}
+
+.login-btn{
+    width:100%;
+}
+
+.login-links{
+    margin-top:20px;
+
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.login-links a,
+.register-prompt a{
+    text-decoration:none;
+    color:#ff3385;
+    font-weight:bold;
+}
+
+.register-prompt{
+    margin-top:25px;
+}
+
+footer{
+    background:#ff66b2;
+    color:white;
+    padding-top:40px;
+}
+
+/* container */
+.footer-container{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    gap:30px;
+    padding:0 20px 30px;
+}
+
+/* sections */
+.footer-section{
+    min-width:200px;
+}
+
+/* titles */
+.footer-section h3{
+    margin-bottom:15px;
+    font-size:18px;
+}
+
+/* text links + info */
+.footer-section p{
+    margin:8px 0;
+    font-size:14px;
+}
+
+/* links */
+.footer-section a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.footer-section a:hover{
+    color:#ffe6f2;
+}
+
+/* social links */
+.social-links a{
+    display:block;
+    margin-bottom:10px;
+}
+
+/* bottom bar */
+.footer-bottom{
+    background:#ff3385;
+    text-align:center;
+    padding:15px;
+    margin-top:10px;
+    font-size:14px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .header-container{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .form-row{
+        flex-direction:column;
+    }
+
+    .promo-cards{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .login-links{
+        flex-direction:column;
+        text-align:center;
+    }
+}
